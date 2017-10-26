@@ -46,6 +46,7 @@ def batch_norm_relu(inputs, is_training, data_format):
       inputs=inputs, axis=1 if data_format == 'channels_first' else 3,
       momentum=_BATCH_NORM_DECAY, epsilon=_BATCH_NORM_EPSILON, center=True,
       scale=True, training=is_training, fused=True)
+  # NOTE: Might need to change the activation function here
   inputs = tf.nn.relu(inputs)
   return inputs
 
