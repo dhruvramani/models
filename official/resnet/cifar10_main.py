@@ -29,10 +29,10 @@ import resnet_model
 parser = argparse.ArgumentParser()
 
 # Basic model parameters.
-parser.add_argument('--data_dir', type=str, default='/tmp/cifar10_data',
+parser.add_argument('--data_dir', type=str, default='./cifar10_data',
                     help='The path to the CIFAR-10 data directory.')
 
-parser.add_argument('--model_dir', type=str, default='/tmp/cifar10_model',
+parser.add_argument('--model_dir', type=str, default='./cifar10_model',
                     help='The directory where the model will be stored.')
 
 parser.add_argument('--resnet_size', type=int, default=32,
